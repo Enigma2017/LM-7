@@ -299,6 +299,10 @@ h3{
         padding-bottom: 76px;
     }
 
+    .item3-title::before{
+        display: none;
+    }
+
 }
 
 
