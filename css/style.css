@@ -10,6 +10,7 @@ body{
 
 .container{
     max-width: 1430px;
+    min-width: 290px;
     margin-inline: auto;
     width: 100%;   
 }
@@ -23,6 +24,7 @@ body{
     display: flex;
     flex-wrap: wrap;
     padding-left: 135px;
+    column-gap: 74px;
 }
 
 .header-text{
@@ -50,29 +52,27 @@ h1{
     font-size: 32px;
     max-width: 575px;
     line-height: 50px;
-    margin-bottom: 71px;
-}
-
-.header-btn{
-    margin-bottom: 90px;
+    padding-bottom: 31px;
 }
 
 .header-btn a{
     text-decoration: none;
     color: #fff;
     padding: 30px 73px;
+    width: 276px;
+    height: 96px;
     background-color: rgb(22, 21, 21);
     font-weight: 300;
     font-size: 32px;
-    outline: none;
     border: none;
     cursor: pointer;
 }
 
 .header-btn a:hover{
-    border: 1px solid rgb(22, 21, 21);
+    /*border: 1px solid rgb(22, 21, 21);*/
     color: rgb(22, 21, 21);
     background-color: #fff;
+    outline: none;
     transition: 1s all ease;
     -webkit-transition: 1s all ease;
     -moz-transition: 1s all ease;
@@ -80,18 +80,21 @@ h1{
     -o-transition: 1s all ease;
 }
 
-.header-btn::after{
-    content: '1700$';
+.header-btn__buy{
+    display: flex;
+    margin-top: 40px;
+}
+
+.header-btn__price{
     font-weight: 300;
+    margin-top: -27px;
     font-size: 32px;
-    padding: 30px;
+    padding: 28px 30px 0;
+    width: 138px;
+    height: 89px;
     color: rgb(22, 21, 21);
     background-color: #fff;
     box-shadow: 0 0 28px 0 rgba(214, 214, 214, 0.25);
-}
-
-.header-img{
-    margin-left: 74px;
 }
 
 .main{
@@ -196,6 +199,17 @@ h3{
     font-weight: 400;
 }
 
+.item3-text a:hover{
+    text-decoration-line: underline;
+    color: rgb(187, 139, 93);
+    -moz-text-decoration-line: underline;
+    transition: .5s all ease;
+    -webkit-transition: .5s all ease;
+    -moz-transition: .5s all ease;
+    -ms-transition: .5s all ease;
+    -o-transition: .5s all ease;
+}
+
 @media screen and (max-width: 1500px){
     .container{
         width: 90%;
@@ -216,11 +230,9 @@ h3{
         align-items: center;
         align-content: center;
     }
-}
 
-@media screen and (max-width: 992px){
-    .header-img{
-        margin-left: 0;
+    .header-btn__buy{
+        margin-bottom: 64px;
     }
 }
 
@@ -259,9 +271,12 @@ h3{
         font-size: 26px;
     }
     
-    .header-btn::after{
+    .header-btn__price{
+        margin-top: -13px;
         font-size: 26px;
-        padding: 15px;
+        padding: 16px 36px 0;
+        width: 138px;
+        height: 54px;
     }
 
     .main-item1{
@@ -300,9 +315,43 @@ h3{
     }
 
     .item3-title::before{
-        display: none;
+        width: 128px;
+        left: 38%;
     }
 
 }
 
+@media screen and (max-width: 492px){
+    .item3-title::before{
+        width: 120px;
+        left: 36%;
+    }
+}
 
+@media screen and (max-width: 386px){
+    .item3-title::before{
+        width: 120px;
+        left: 34%;
+    }
+
+    .header-btn a{
+        padding: 15px 28px;
+        font-size: 26px;
+        width: 157px;
+    }
+    
+    .header-btn__price{
+        margin-top: -13px;
+        font-size: 26px;
+        padding: 16px 24px 0;
+        width: 108px;
+        height: 54px;
+    }
+}
+
+@media screen and (max-width: 352px){
+    .item3-title::before{
+        width: 120px;
+        left: 31%;
+    }
+}
